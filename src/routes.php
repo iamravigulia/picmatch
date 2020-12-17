@@ -1,10 +1,12 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
-Route::get('greeting', function () {
-    return 'Hi, this is your awesome package!';
-});
+// Route::get('greeting', function () {
+//     return 'Hi, this is your awesome package! picmatch';
+// });
 
-Route::get('test', 'EdgeWizz\Fillup\Controllers\FillupController@test')->name('test');
+// Route::get('picmatch/test', 'EdgeWizz\Picmatch\Controllers\PicmatchController@test')->name('test');
 
-Route::post('fmt/store', 'EdgeWizz\Fillup\Controllers\FillupController@store')->name('fmt.fillup.store');
+Route::post('fmt/picmatch/store', 'EdgeWizz\Picmatch\Controllers\PicmatchController@store')->name('fmt.picmatch.store');
+
+Route::post('fmt/picmatch/csv_upload', 'EdgeWizz\Picmatch\Controllers\PicmatchController@csv_upload')->name('fmt.picmatch.csv');
